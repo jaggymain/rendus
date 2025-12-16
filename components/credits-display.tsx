@@ -104,13 +104,13 @@ export function CreditsDisplay({ className }: CreditsDisplayProps) {
               {CREDIT_PACKAGES.map((pkg) => (
                 <Button
                   key={pkg.id}
-                  variant={pkg.popular ? 'default' : 'outline'}
+                  variant={'popular' in pkg && pkg.popular ? 'default' : 'outline'}
                   className="w-full justify-between"
                   onClick={() => handlePurchase(pkg.id)}
                   disabled={purchasing !== null}
                 >
                   <span className="flex items-center gap-2">
-                    {pkg.popular && <span className="text-xs bg-yellow-500 text-black px-1.5 py-0.5 rounded">BEST</span>}
+                    {'popular' in pkg && pkg.popular && <span className="text-xs bg-yellow-500 text-black px-1.5 py-0.5 rounded">BEST</span>}
                     {pkg.label}
                   </span>
                   <span className="font-medium">${(pkg.price / 100).toFixed(0)}</span>

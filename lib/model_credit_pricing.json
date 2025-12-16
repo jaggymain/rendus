@@ -1,0 +1,2144 @@
+{
+  "credit_system": {
+    "base_rate_usd": 0.05,
+    "description": "1 credit = $0.05 USD cost to operator"
+  },
+  "text_to_image": {
+    "fal-ai/flux-pro/v1.1-ultra": {
+      "credits": 1,
+      "fal_cost": 0.06,
+      "unit": "images"
+    },
+    "fal-ai/recraft/v3/text-to-image": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "bria/text-to-image/3.2": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "generations"
+    },
+    "fal-ai/imagen4/preview/fast": {
+      "credits": 1,
+      "fal_cost": 0.02,
+      "unit": "images"
+    },
+    "fal-ai/imagen4/preview": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/ideogram/v2": {
+      "credits": 2,
+      "fal_cost": 0.08,
+      "unit": "images"
+    },
+    "fal-ai/emu-3.5-image/text-to-image": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "images"
+    },
+    "bria/fibo/generate": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/gpt-image-1-mini": {
+      "credits": 1,
+      "fal_cost": 0.02,
+      "unit": "images"
+    },
+    "fal-ai/reve/text-to-image": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/wan-25-preview/text-to-image": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "fal-ai/bytedance/seedream/v4/text-to-image": {
+      "credits": 1,
+      "fal_cost": 0.03,
+      "unit": "images"
+    },
+    "fal-ai/gemini-25-flash-image": {
+      "credits": 1,
+      "fal_cost": 0.0398,
+      "unit": "images"
+    },
+    "fal-ai/nano-banana": {
+      "credits": 1,
+      "fal_cost": 0.0398,
+      "unit": "images"
+    },
+    "fal-ai/bytedance/dreamina/v3.1/text-to-image": {
+      "credits": 1,
+      "fal_cost": 0.03,
+      "unit": "images"
+    },
+    "fal-ai/wan/v2.2-a14b/text-to-image/lora": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "fal-ai/wan/v2.2-5b/text-to-image": {
+      "credits": 1,
+      "fal_cost": 0.016,
+      "unit": "images"
+    },
+    "fal-ai/wan/v2.2-a14b/text-to-image": {
+      "credits": 1,
+      "fal_cost": 0.025,
+      "unit": "images"
+    },
+    "fal-ai/bytedance/seedream/v3/text-to-image": {
+      "credits": 1,
+      "fal_cost": 0.03,
+      "unit": "images"
+    },
+    "fal-ai/flux-pro/kontext/max/text-to-image": {
+      "credits": 2,
+      "fal_cost": 0.08,
+      "unit": "images"
+    },
+    "fal-ai/flux-pro/kontext/text-to-image": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/bagel": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "images"
+    },
+    "fal-ai/imagen4/preview/ultra": {
+      "credits": 1,
+      "fal_cost": 0.06,
+      "unit": "images"
+    },
+    "fal-ai/minimax/image-01": {
+      "credits": 1,
+      "fal_cost": 0.01,
+      "unit": "images"
+    },
+    "fal-ai/ideogram/v3": {
+      "credits": 1,
+      "fal_cost": 0.03,
+      "unit": "images"
+    },
+    "fal-ai/ideogram/v2a/turbo": {
+      "credits": 1,
+      "fal_cost": 0.025,
+      "unit": "images"
+    },
+    "fal-ai/ideogram/v2a": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/imagen3": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "fal-ai/imagen3/fast": {
+      "credits": 1,
+      "fal_cost": 0.025,
+      "unit": "images"
+    },
+    "fal-ai/flux-pro/v1.1-ultra-finetuned": {
+      "credits": 1,
+      "fal_cost": 0.07,
+      "unit": "images"
+    },
+    "fal-ai/bria/text-to-image/fast": {
+      "credits": 1,
+      "fal_cost": 0.028,
+      "unit": "generations"
+    },
+    "fal-ai/bria/text-to-image/base": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "generations"
+    },
+    "fal-ai/bria/text-to-image/hd": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "generations"
+    },
+    "fal-ai/recraft-20b": {
+      "credits": 1,
+      "fal_cost": 0.0219,
+      "unit": "images"
+    },
+    "fal-ai/ideogram/v2/turbo": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "fal-ai/stable-diffusion-v3-medium": {
+      "credits": 1,
+      "fal_cost": 0.035,
+      "unit": "images"
+    },
+    "fal-ai/gemini-3-pro-image-preview": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "images"
+    },
+    "fal-ai/nano-banana-pro": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "images"
+    },
+    "fal-ai/sana-video": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "videos"
+    },
+    "fal-ai/ovi": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/ltx-video-13b-dev": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/ltx-video-13b-distilled": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "videos"
+    },
+    "fal-ai/ltx-video-lora": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/ltx-video-v097": {
+      "credits": 2,
+      "fal_cost": 0.12,
+      "unit": "videos"
+    },
+    "fal-ai/kling-video/lipsync/audio-to-video": {
+      "credits": 1,
+      "fal_cost": 0.014,
+      "unit": "units"
+    },
+    "fal-ai/ltx-video-v095": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "videos"
+    },
+    "fal-ai/minimax/video-01-director": {
+      "credits": 10,
+      "fal_cost": 0.5,
+      "unit": "videos"
+    },
+    "fal-ai/transpixar": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "videos"
+    },
+    "fal-ai/cogvideox-5b": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/minimax/video-01-live": {
+      "credits": 10,
+      "fal_cost": 0.5,
+      "unit": "videos"
+    },
+    "fal-ai/luma-dream-machine": {
+      "credits": 10,
+      "fal_cost": 0.5,
+      "unit": "videos"
+    },
+    "fal-ai/mochi-v1": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "videos"
+    },
+    "fal-ai/hunyuan-video": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "videos"
+    },
+    "fal-ai/ltx-video": {
+      "credits": 1,
+      "fal_cost": 0.02,
+      "unit": "videos"
+    },
+    "fal-ai/minimax/video-01": {
+      "credits": 10,
+      "fal_cost": 0.5,
+      "unit": "videos"
+    },
+    "fal-ai/flux-pro/kontext": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/sam-3/image-rle": {
+      "credits": 1,
+      "fal_cost": 0.005,
+      "unit": "units"
+    },
+    "fal-ai/sam-3/image": {
+      "credits": 1,
+      "fal_cost": 0.005,
+      "unit": "units"
+    },
+    "fal-ai/image-apps-v2/product-holding": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/product-photography": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/virtual-try-on": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/texture-transform": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/relighting": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/style-transfer": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/photo-restoration": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/portrait-enhance": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/photography-effects": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/perspective": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/object-removal": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/headshot-photo": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/hair-change": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/expression-change": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/city-teleport": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/age-modify": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-apps-v2/makeup-application": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/vidu/reference-to-image": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "bria/reimagine/3.2": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/nextstep-1": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "images"
+    },
+    "fal-ai/ideogram/character": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "fal-ai/hunyuan_world": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "images"
+    },
+    "fal-ai/hidream-e1-1": {
+      "credits": 1,
+      "fal_cost": 0.06,
+      "unit": "images"
+    },
+    "fal-ai/bria/reimagine": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "generations"
+    },
+    "fal-ai/post-processing/vignette": {
+      "credits": 1,
+      "fal_cost": 0.001,
+      "unit": "images"
+    },
+    "fal-ai/post-processing/solarize": {
+      "credits": 1,
+      "fal_cost": 0.001,
+      "unit": "images"
+    },
+    "fal-ai/post-processing/sharpen": {
+      "credits": 1,
+      "fal_cost": 0.001,
+      "unit": "images"
+    },
+    "fal-ai/wan-effects": {
+      "credits": 7,
+      "fal_cost": 0.35,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/swap": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v5/transition": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/pixverse/v5/effects": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/bytedance/video-stylize": {
+      "credits": 5,
+      "fal_cost": 0.23,
+      "unit": "videos"
+    },
+    "fal-ai/hunyuan-avatar": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v4.5/transition": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/pixverse/v4.5/effects": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/hunyuan-custom": {
+      "credits": 16,
+      "fal_cost": 0.8,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v4/effects": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/wan-flf2v": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v3.5/effects": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/pixverse/v3.5/transition": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/pika/v1.5/pikaffects": {
+      "credits": 9,
+      "fal_cost": 0.465,
+      "unit": "videos"
+    },
+    "fal-ai/pika/v2.2/pikascenes": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/vidu/q2/reference-to-video": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "videos"
+    },
+    "fal-ai/hunyuan-video-img2vid-lora": {
+      "credits": 6,
+      "fal_cost": 0.3,
+      "unit": "videos"
+    },
+    "fal-ai/minimax/video-01-subject-reference": {
+      "credits": 10,
+      "fal_cost": 0.5,
+      "unit": "videos"
+    },
+    "fal-ai/stable-video": {
+      "credits": 1,
+      "fal_cost": 0.075,
+      "unit": "videos"
+    },
+    "fal-ai/veo3/fast": {
+      "credits_per_5sec": 15,
+      "fal_cost_per_sec": 0.15,
+      "unit": "seconds"
+    },
+    "fal-ai/veo3": {
+      "credits_per_5sec": 40,
+      "fal_cost_per_sec": 0.4,
+      "unit": "seconds"
+    },
+    "fal-ai/wan-alpha": {
+      "credits_per_5sec": 4,
+      "fal_cost_per_sec": 0.04,
+      "unit": "seconds"
+    },
+    "fal-ai/veo3.1/fast": {
+      "credits_per_5sec": 15,
+      "fal_cost_per_sec": 0.15,
+      "unit": "seconds"
+    },
+    "fal-ai/veo3.1": {
+      "credits_per_5sec": 40,
+      "fal_cost_per_sec": 0.4,
+      "unit": "seconds"
+    },
+    "fal-ai/infinitalk/single-text": {
+      "credits_per_5sec": 20,
+      "fal_cost_per_sec": 0.2,
+      "unit": "seconds"
+    },
+    "fal-ai/ltxv-13b-098-distilled": {
+      "credits_per_5sec": 2,
+      "fal_cost_per_sec": 0.02,
+      "unit": "seconds"
+    },
+    "fal-ai/magi": {
+      "credits_per_5sec": 20,
+      "fal_cost_per_sec": 0.2,
+      "unit": "seconds"
+    },
+    "fal-ai/magi-distilled": {
+      "credits_per_5sec": 8,
+      "fal_cost_per_sec": 0.08,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.5/pro/effects": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.6/pro/effects": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.095,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1/standard/effects": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.045,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.6/standard/effects": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.045,
+      "unit": "seconds"
+    },
+    "fal-ai/veo2": {
+      "credits_per_5sec": 50,
+      "fal_cost_per_sec": 0.5,
+      "unit": "seconds"
+    },
+    "fal-ai/rife": {
+      "credits_per_5sec": 1,
+      "fal_cost_per_sec": 0.0013,
+      "unit": "seconds"
+    },
+    "fal-ai/film": {
+      "credits_per_5sec": 1,
+      "fal_cost_per_sec": 0.0013,
+      "unit": "seconds"
+    },
+    "bytedance/lynx": {
+      "credits_per_5sec": 60,
+      "fal_cost_per_sec": 0.6,
+      "unit": "seconds"
+    },
+    "fal-ai/veo3.1/fast/first-last-frame-to-video": {
+      "credits_per_5sec": 15,
+      "fal_cost_per_sec": 0.15,
+      "unit": "seconds"
+    },
+    "fal-ai/veo3.1/first-last-frame-to-video": {
+      "credits_per_5sec": 40,
+      "fal_cost_per_sec": 0.4,
+      "unit": "seconds"
+    },
+    "fal-ai/veo3.1/reference-to-video": {
+      "credits_per_5sec": 40,
+      "fal_cost_per_sec": 0.4,
+      "unit": "seconds"
+    },
+    "fal-ai/bytedance/omnihuman/v1.5": {
+      "credits_per_5sec": 16,
+      "fal_cost_per_sec": 0.16,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1/standard/ai-avatar": {
+      "credits_per_5sec": 6,
+      "fal_cost_per_sec": 0.0562,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1/pro/ai-avatar": {
+      "credits_per_5sec": 12,
+      "fal_cost_per_sec": 0.115,
+      "unit": "seconds"
+    },
+    "fal-ai/infinitalk": {
+      "credits_per_5sec": 20,
+      "fal_cost_per_sec": 0.2,
+      "unit": "seconds"
+    },
+    "fal-ai/bytedance/omnihuman": {
+      "credits_per_5sec": 14,
+      "fal_cost_per_sec": 0.14,
+      "unit": "seconds"
+    },
+    "fal-ai/ai-avatar/single-text": {
+      "credits_per_5sec": 20,
+      "fal_cost_per_sec": 0.2,
+      "unit": "seconds"
+    },
+    "fal-ai/ai-avatar": {
+      "credits_per_5sec": 20,
+      "fal_cost_per_sec": 0.2,
+      "unit": "seconds"
+    },
+    "fal-ai/ai-avatar/multi-text": {
+      "credits_per_5sec": 20,
+      "fal_cost_per_sec": 0.2,
+      "unit": "seconds"
+    },
+    "fal-ai/ai-avatar/multi": {
+      "credits_per_5sec": 20,
+      "fal_cost_per_sec": 0.2,
+      "unit": "seconds"
+    },
+    "fal-ai/hunyuan-portrait": {
+      "credits_per_5sec": 8,
+      "fal_cost_per_sec": 0.08,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.6/standard/elements": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.045,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.6/pro/elements": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.095,
+      "unit": "seconds"
+    },
+    "fal-ai/framepack/f1": {
+      "credits_per_5sec": 3,
+      "fal_cost_per_sec": 0.0333,
+      "unit": "seconds"
+    },
+    "fal-ai/framepack/flf2v": {
+      "credits_per_5sec": 3,
+      "fal_cost_per_sec": 0.0333,
+      "unit": "seconds"
+    },
+    "fal-ai/framepack": {
+      "credits_per_5sec": 3,
+      "fal_cost_per_sec": 0.0333,
+      "unit": "seconds"
+    },
+    "fal-ai/hidream-i1-full": {
+      "pricing_type": "variable",
+      "fal_cost": 0.05,
+      "unit": "megapixels"
+    },
+    "fal-ai/hidream-i1-dev": {
+      "pricing_type": "variable",
+      "fal_cost": 0.03,
+      "unit": "megapixels"
+    },
+    "fal-ai/hidream-i1-fast": {
+      "pricing_type": "variable",
+      "fal_cost": 0.01,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux/dev": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/stable-diffusion-v35-large": {
+      "pricing_type": "variable",
+      "fal_cost": 0.065,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-general": {
+      "pricing_type": "variable",
+      "fal_cost": 0.075,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-lora": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/piflow": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/hunyuan-image/v3/text-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.1,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux/srpo": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-1/srpo": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/hunyuan-image/v2.1/text-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.1,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.02,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-krea-lora/stream": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-krea-lora": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux/krea": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-1/krea": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/sky-raccoon": {
+      "pricing_type": "variable",
+      "fal_cost": 0.06,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-kontext-lora/text-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/omnigen-v2": {
+      "pricing_type": "variable",
+      "fal_cost": 0.15,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-1/schnell": {
+      "pricing_type": "variable",
+      "fal_cost": 0.003,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-1/dev": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/dreamo": {
+      "pricing_type": "variable",
+      "fal_cost": 0.05,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-lora/stream": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "easel-ai/easel-avatar": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/pony-v7": {
+      "pricing_type": "variable",
+      "fal_cost": 0.03,
+      "unit": "megapixels"
+    },
+    "fal-ai/f-lite/standard": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/f-lite/texture": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/gpt-image-1/text-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.04,
+      "unit": "1000 tokens"
+    },
+    "fal-ai/sana/v1.5/1.6b": {
+      "pricing_type": "variable",
+      "fal_cost": 0.0075,
+      "unit": "megapixels"
+    },
+    "fal-ai/sana/v1.5/4.8b": {
+      "pricing_type": "variable",
+      "fal_cost": 0.01,
+      "unit": "megapixels"
+    },
+    "fal-ai/sana/sprint": {
+      "pricing_type": "variable",
+      "fal_cost": 0.0025,
+      "unit": "megapixels"
+    },
+    "rundiffusion-fal/juggernaut-flux/lightning": {
+      "pricing_type": "variable",
+      "fal_cost": 0.006,
+      "unit": "megapixels"
+    },
+    "rundiffusion-fal/rundiffusion-photo-flux": {
+      "pricing_type": "variable",
+      "fal_cost": 0.045,
+      "unit": "megapixels"
+    },
+    "rundiffusion-fal/juggernaut-flux-lora": {
+      "pricing_type": "variable",
+      "fal_cost": 0.045,
+      "unit": "megapixels"
+    },
+    "rundiffusion-fal/juggernaut-flux/pro": {
+      "pricing_type": "variable",
+      "fal_cost": 0.055,
+      "unit": "megapixels"
+    },
+    "rundiffusion-fal/juggernaut-flux/base": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/cogview4": {
+      "pricing_type": "variable",
+      "fal_cost": 0.1,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-control-lora-canny": {
+      "pricing_type": "variable",
+      "fal_cost": 0.04,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-control-lora-depth": {
+      "pricing_type": "variable",
+      "fal_cost": 0.04,
+      "unit": "megapixels"
+    },
+    "fal-ai/lumina-image/v2": {
+      "pricing_type": "variable",
+      "fal_cost": 0.075,
+      "unit": "megapixels"
+    },
+    "fal-ai/janus": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/flux-pro/v1.1": {
+      "pricing_type": "variable",
+      "fal_cost": 0.04,
+      "unit": "megapixels"
+    },
+    "fal-ai/switti": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/switti/512": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/luma-photon/flash": {
+      "pricing_type": "variable",
+      "fal_cost": 0.005,
+      "unit": "megapixels"
+    },
+    "fal-ai/aura-flow": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/omnigen-v1": {
+      "pricing_type": "variable",
+      "fal_cost": 0.1,
+      "unit": "processed megapixels"
+    },
+    "fal-ai/flux/schnell": {
+      "pricing_type": "variable",
+      "fal_cost": 0.003,
+      "unit": "megapixels"
+    },
+    "fal-ai/stable-diffusion-v35-medium": {
+      "pricing_type": "variable",
+      "fal_cost": 0.02,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-pro/new": {
+      "pricing_type": "variable",
+      "fal_cost": 0.05,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-subject": {
+      "pricing_type": "variable",
+      "fal_cost": 0.04,
+      "unit": "megapixels"
+    },
+    "fal-ai/sana": {
+      "pricing_type": "variable",
+      "fal_cost": 0.001,
+      "unit": "megapixels"
+    },
+    "fal-ai/pixart-sigma": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/sdxl-controlnet-union": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/kolors": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/stable-cascade": {
+      "pricing_type": "variable",
+      "fal_cost": 0.000575,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fast-sdxl": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/stable-cascade/sote-diffusion": {
+      "pricing_type": "variable",
+      "fal_cost": 0.000575,
+      "unit": "compute seconds"
+    },
+    "fal-ai/luma-photon": {
+      "pricing_type": "variable",
+      "fal_cost": 0.019,
+      "unit": "megapixels"
+    },
+    "fal-ai/lightning-models": {
+      "pricing_type": "variable",
+      "fal_cost": 0.000575,
+      "unit": "compute seconds"
+    },
+    "fal-ai/playground-v25": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/flux-2-flex": {
+      "pricing_type": "variable",
+      "fal_cost": 0.06,
+      "unit": "processed megapixels"
+    },
+    "fal-ai/flux-2/lora": {
+      "pricing_type": "variable",
+      "fal_cost": 0.021,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-2": {
+      "pricing_type": "variable",
+      "fal_cost": 0.012,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-2-pro": {
+      "pricing_type": "variable",
+      "fal_cost": 0.03,
+      "unit": "processed megapixels"
+    },
+    "imagineart/imagineart-1.5-preview/text-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00007,
+      "unit": "compute seconds"
+    },
+    "fal-ai/dreamshaper": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/stable-diffusion-v15": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/layer-diffusion": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fast-lightning-sdxl": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fast-sdxl-controlnet-canny": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fast-lcm-diffusion": {
+      "pricing_type": "variable",
+      "fal_cost": 0.000575,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fast-fooocus-sdxl": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/illusion-diffusion": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/lcm": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/diffusion-edge": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fooocus": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/lora": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/luma-dream-machine/ray-2-flash": {
+      "pricing_type": "variable",
+      "fal_cost": 0.2,
+      "unit": "5 seconds"
+    },
+    "fal-ai/luma-dream-machine/ray-2": {
+      "pricing_type": "variable",
+      "fal_cost": 0.5,
+      "unit": "5 seconds"
+    },
+    "fal-ai/animatediff-sparsectrl-lcm": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/aura-sr": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/flux-2-lora-gallery/virtual-tryon": {
+      "pricing_type": "variable",
+      "fal_cost": 0.021,
+      "unit": "compute seconds"
+    },
+    "fal-ai/flux-2-lora-gallery/face-to-full-portrait": {
+      "pricing_type": "variable",
+      "fal_cost": 0.021,
+      "unit": "compute seconds"
+    },
+    "fal-ai/flux-2-lora-gallery/apartment-staging": {
+      "pricing_type": "variable",
+      "fal_cost": 0.021,
+      "unit": "megapixels"
+    },
+    "fal-ai/image2pixel": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00017,
+      "unit": "compute seconds"
+    },
+    "fal-ai/lucidflux": {
+      "pricing_type": "variable",
+      "fal_cost": 0.05,
+      "unit": "megapixels"
+    },
+    "easel-ai/product-photoshoot": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/uso": {
+      "pricing_type": "variable",
+      "fal_cost": 0.1,
+      "unit": "megapixels"
+    },
+    "easel-ai/fashion-tryon": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/flux/krea/redux": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-1/krea/redux": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "easel-ai/fashion-photoshoot": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/calligrapher": {
+      "pricing_type": "variable",
+      "fal_cost": 0.2,
+      "unit": "megapixels"
+    },
+    "veed/fabric-1.0/fast": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00017,
+      "unit": "compute seconds"
+    },
+    "veed/fabric-1.0": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00017,
+      "unit": "compute seconds"
+    },
+    "fal-ai/sadtalker/reference": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/amt-interpolation/frame-interpolation": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/live-portrait": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/musetalk": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/sadtalker": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fast-svd-lcm": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    }
+  },
+  "text_to_video": {
+    "fal-ai/infinity-star/text-to-video": {
+      "credits": 1,
+      "fal_cost": 0.07,
+      "unit": "videos"
+    },
+    "fal-ai/minimax/hailuo-2.3/pro/text-to-video": {
+      "credits": 10,
+      "fal_cost": 0.49,
+      "unit": "units"
+    },
+    "fal-ai/vidu/q2/text-to-video": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "videos"
+    },
+    "fal-ai/kandinsky5/text-to-video/distill": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "videos"
+    },
+    "fal-ai/kandinsky5/text-to-video": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v5/text-to-video": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/wan/v2.2-5b/text-to-video/distill": {
+      "credits": 2,
+      "fal_cost": 0.08,
+      "unit": "videos"
+    },
+    "fal-ai/wan/v2.2-5b/text-to-video/fast-wan": {
+      "credits": 1,
+      "fal_cost": 0.025,
+      "unit": "videos"
+    },
+    "fal-ai/wan/v2.2-a14b/text-to-video/turbo": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "videos"
+    },
+    "fal-ai/wan/v2.2-5b/text-to-video": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v4.5/text-to-video/fast": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "video segments"
+    },
+    "fal-ai/pixverse/v4.5/text-to-video": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/pixverse/v4/text-to-video": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/pixverse/v4/text-to-video/fast": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "video segments"
+    },
+    "fal-ai/kling-video/lipsync/text-to-video": {
+      "credits": 1,
+      "fal_cost": 0.014,
+      "unit": "units"
+    },
+    "fal-ai/wan-t2v-lora": {
+      "credits": 15,
+      "fal_cost": 0.75,
+      "unit": "videos"
+    },
+    "fal-ai/pika/v2.2/text-to-video": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/pika/v2.1/text-to-video": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "videos"
+    },
+    "fal-ai/pika/v2/turbo/text-to-video": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/wan/v2.1/1.3b/text-to-video": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/wan-t2v": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v3.5/text-to-video": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/pixverse/v3.5/text-to-video/fast": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "video segments"
+    },
+    "fal-ai/kling-video/v2.5-turbo/pro/text-to-video": {
+      "credits_per_5sec": 7,
+      "fal_cost_per_sec": 0.07,
+      "unit": "seconds"
+    },
+    "fal-ai/minimax/hailuo-02/standard/text-to-video": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.045,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v2/master/text-to-video": {
+      "credits_per_5sec": 28,
+      "fal_cost_per_sec": 0.28,
+      "unit": "seconds"
+    },
+    "fal-ai/longcat-video/text-to-video/720p": {
+      "credits_per_5sec": 4,
+      "fal_cost_per_sec": 0.04,
+      "unit": "seconds"
+    },
+    "fal-ai/longcat-video/text-to-video/480p": {
+      "credits_per_5sec": 3,
+      "fal_cost_per_sec": 0.025,
+      "unit": "seconds"
+    },
+    "fal-ai/longcat-video/distilled/text-to-video/720p": {
+      "credits_per_5sec": 1,
+      "fal_cost_per_sec": 0.01,
+      "unit": "seconds"
+    },
+    "fal-ai/ltxv-2/text-to-video/fast": {
+      "credits_per_5sec": 4,
+      "fal_cost_per_sec": 0.04,
+      "unit": "seconds"
+    },
+    "fal-ai/ltxv-2/text-to-video": {
+      "credits_per_5sec": 6,
+      "fal_cost_per_sec": 0.06,
+      "unit": "seconds"
+    },
+    "fal-ai/krea-wan-14b/text-to-video": {
+      "credits_per_5sec": 3,
+      "fal_cost_per_sec": 0.025,
+      "unit": "seconds"
+    },
+    "fal-ai/sora-2/text-to-video/pro": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "fal-ai/sora-2/text-to-video": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "fal-ai/wan-25-preview/text-to-video": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.05,
+      "unit": "seconds"
+    },
+    "fal-ai/wan/v2.2-a14b/text-to-video/lora": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "fal-ai/wan/v2.2-a14b/text-to-video": {
+      "credits_per_5sec": 8,
+      "fal_cost_per_sec": 0.08,
+      "unit": "seconds"
+    },
+    "fal-ai/minimax/hailuo-02/pro/text-to-video": {
+      "credits_per_5sec": 8,
+      "fal_cost_per_sec": 0.08,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v2.1/master/text-to-video": {
+      "credits_per_5sec": 28,
+      "fal_cost_per_sec": 0.28,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.6/pro/text-to-video": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.095,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.6/standard/text-to-video": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.045,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1/standard/text-to-video": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.045,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.5/pro/text-to-video": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1/pro/text-to-video": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "argil/avatars/text-to-video": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "moonvalley/marey/t2v": {
+      "pricing_type": "variable",
+      "fal_cost": 1.5,
+      "unit": "5 seconds"
+    },
+    "veed/avatars/text-to-video": {
+      "pricing_type": "variable",
+      "fal_cost": 0.000575,
+      "unit": "compute seconds"
+    },
+    "fal-ai/wan-pro/text-to-video": {
+      "pricing_type": "variable",
+      "fal_cost": 0.8,
+      "unit": "5 seconds"
+    },
+    "fal-ai/fast-svd/text-to-video": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fast-svd-lcm/text-to-video": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/t2v-turbo": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00125,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fast-animatediff/text-to-video": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fast-animatediff/turbo/text-to-video": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    }
+  },
+  "image_to_image": {
+    "fal-ai/chrono-edit-lora": {
+      "credits": 1,
+      "fal_cost": 0.02,
+      "unit": "images"
+    },
+    "fal-ai/chrono-edit-lora-gallery/upscaler": {
+      "credits": 1,
+      "fal_cost": 0.03,
+      "unit": "images"
+    },
+    "fal-ai/gemini-3-pro-image-preview/edit": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "images"
+    },
+    "fal-ai/nano-banana-pro/edit": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "images"
+    },
+    "fal-ai/reve/fast/remix": {
+      "credits": 1,
+      "fal_cost": 0.01,
+      "unit": "images"
+    },
+    "fal-ai/reve/fast/edit": {
+      "credits": 1,
+      "fal_cost": 0.01,
+      "unit": "images"
+    },
+    "fal-ai/emu-3.5-image/edit-image": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "images"
+    },
+    "fal-ai/chrono-edit": {
+      "credits": 1,
+      "fal_cost": 0.01,
+      "unit": "images"
+    },
+    "fal-ai/gpt-image-1-mini/edit": {
+      "credits": 1,
+      "fal_cost": 0.02,
+      "unit": "images"
+    },
+    "fal-ai/reve/remix": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/reve/edit": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/dreamomni2/edit": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "fal-ai/wan-25-preview/image-to-image": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "fal-ai/bytedance/seedream/v4/edit": {
+      "credits": 1,
+      "fal_cost": 0.03,
+      "unit": "images"
+    },
+    "fal-ai/wan/v2.2-a14b/image-to-image": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "fal-ai/gemini-25-flash-image/edit": {
+      "credits": 1,
+      "fal_cost": 0.0398,
+      "unit": "images"
+    },
+    "fal-ai/nano-banana/edit": {
+      "credits": 1,
+      "fal_cost": 0.0398,
+      "unit": "images"
+    },
+    "fal-ai/ideogram/character/edit": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "fal-ai/ideogram/character/remix": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "images"
+    },
+    "fal-ai/image-editing/retouch": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/image-editing/realism": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "images"
+    },
+    "fal-ai/flux-lora/inpainting": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/fooocus/upscale-or-vary": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/flux-2/lora/edit": {
+      "pricing_type": "variable",
+      "fal_cost": 0.021,
+      "unit": "processed megapixels"
+    },
+    "fal-ai/fast-fooocus-sdxl/image-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/fooocus/inpaint": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "simalabs/sima-upscaler": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00111,
+      "unit": "compute seconds"
+    },
+    "fal-ai/flux/dev/image-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.03,
+      "unit": "megapixels"
+    },
+    "fal-ai/clarity-upscaler": {
+      "pricing_type": "variable",
+      "fal_cost": 0.03,
+      "unit": "megapixels"
+    },
+    "clarityai/crystal-upscaler": {
+      "pricing_type": "variable",
+      "fal_cost": 0.016,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-2-flex/edit": {
+      "pricing_type": "variable",
+      "fal_cost": 0.06,
+      "unit": "processed megapixels"
+    },
+    "fal-ai/flux-2/edit": {
+      "pricing_type": "variable",
+      "fal_cost": 0.012,
+      "unit": "processed megapixels"
+    },
+    "fal-ai/flux-2-pro/edit": {
+      "pricing_type": "variable",
+      "fal_cost": 0.03,
+      "unit": "processed megapixels"
+    },
+    "fal-ai/chrono-edit-lora-gallery/paintbrush": {
+      "pricing_type": "variable",
+      "fal_cost": 0.00007,
+      "unit": "compute seconds"
+    },
+    "fal-ai/qwen-image-edit-plus-lora-gallery/multiple-angles": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-plus-lora-gallery/shirt-design": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-plus-lora-gallery/remove-lighting": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-plus-lora-gallery/remove-element": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-plus-lora-gallery/next-scene": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-plus-lora-gallery/integrate-product": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-plus-lora-gallery/group-photo": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-plus-lora-gallery/face-to-full-portrait": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-plus-lora-gallery/add-background": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/image-apps-v2/outpaint": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-vision-upscaler": {
+      "pricing_type": "variable",
+      "fal_cost": 0.1,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-plus-lora": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit/image-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.03,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-plus": {
+      "pricing_type": "variable",
+      "fal_cost": 0.03,
+      "unit": "megapixels"
+    },
+    "fal-ai/seedvr/upscale/image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.001,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit/inpaint": {
+      "pricing_type": "variable",
+      "fal_cost": 0.03,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux/srpo/image-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-1/srpo/image-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit-lora": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image/image-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.02,
+      "unit": "megapixels"
+    },
+    "fal-ai/qwen-image-edit": {
+      "pricing_type": "variable",
+      "fal_cost": 0.03,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-krea-lora/inpainting": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-krea-lora/image-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux/krea/image-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-1/krea/image-to-image": {
+      "pricing_type": "variable",
+      "fal_cost": 0.025,
+      "unit": "megapixels"
+    },
+    "fal-ai/flux-kontext-lora/inpaint": {
+      "pricing_type": "variable",
+      "fal_cost": 0.035,
+      "unit": "megapixels"
+    }
+  },
+  "image_to_video": {
+    "fal-ai/wan-pro/image-to-video": {
+      "credits": 16,
+      "fal_cost": 0.8,
+      "unit": "videos"
+    },
+    "fal-ai/minimax/video-01/image-to-video": {
+      "credits": 10,
+      "fal_cost": 0.5,
+      "unit": "videos"
+    },
+    "fal-ai/minimax/hailuo-2.3/pro/image-to-video": {
+      "credits": 10,
+      "fal_cost": 0.49,
+      "unit": "units"
+    },
+    "fal-ai/wan-i2v": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "videos"
+    },
+    "fal-ai/minimax/hailuo-2.3-fast/standard/image-to-video": {
+      "credits": 4,
+      "fal_cost": 0.19,
+      "unit": "units"
+    },
+    "fal-ai/minimax/hailuo-2.3/standard/image-to-video": {
+      "credits": 6,
+      "fal_cost": 0.28,
+      "unit": "units"
+    },
+    "fal-ai/minimax/hailuo-2.3-fast/pro/image-to-video": {
+      "credits": 7,
+      "fal_cost": 0.33,
+      "unit": "videos"
+    },
+    "fal-ai/vidu/q2/image-to-video/turbo": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "videos"
+    },
+    "fal-ai/vidu/q2/image-to-video/pro": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "videos"
+    },
+    "fal-ai/ovi/image-to-video": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/decart/lucy-5b/image-to-video": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v5/image-to-video": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/wan/v2.2-a14b/image-to-video/turbo": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "videos"
+    },
+    "fal-ai/wan/v2.2-5b/image-to-video": {
+      "credits": 3,
+      "fal_cost": 0.15,
+      "unit": "videos"
+    },
+    "fal-ai/ltx-video-13b-distilled/image-to-video": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "videos"
+    },
+    "fal-ai/ltx-video-13b-dev/image-to-video": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/ltx-video-lora/image-to-video": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v4.5/image-to-video/fast": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "video segments"
+    },
+    "fal-ai/pixverse/v4.5/image-to-video": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/ltx-video-v097/image-to-video": {
+      "credits": 2,
+      "fal_cost": 0.12,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v4/image-to-video/fast": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "video segments"
+    },
+    "fal-ai/pixverse/v4/image-to-video": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/pika/v2/turbo/image-to-video": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/pika/v2.2/image-to-video": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/pika/v2.1/image-to-video": {
+      "credits": 8,
+      "fal_cost": 0.4,
+      "unit": "videos"
+    },
+    "fal-ai/wan-i2v-lora": {
+      "credits": 15,
+      "fal_cost": 0.75,
+      "unit": "videos"
+    },
+    "fal-ai/ltx-video-v095/image-to-video": {
+      "credits": 1,
+      "fal_cost": 0.04,
+      "unit": "videos"
+    },
+    "fal-ai/minimax/video-01-director/image-to-video": {
+      "credits": 10,
+      "fal_cost": 0.5,
+      "unit": "videos"
+    },
+    "fal-ai/skyreels-i2v": {
+      "credits": 6,
+      "fal_cost": 0.3,
+      "unit": "videos"
+    },
+    "fal-ai/pixverse/v3.5/image-to-video/fast": {
+      "credits": 2,
+      "fal_cost": 0.1,
+      "unit": "video segments"
+    },
+    "fal-ai/pixverse/v3.5/image-to-video": {
+      "credits": 1,
+      "fal_cost": 0.05,
+      "unit": "video segments"
+    },
+    "fal-ai/minimax/video-01-live/image-to-video": {
+      "credits": 10,
+      "fal_cost": 0.5,
+      "unit": "videos"
+    },
+    "fal-ai/cogvideox-5b/image-to-video": {
+      "credits": 4,
+      "fal_cost": 0.2,
+      "unit": "videos"
+    },
+    "fal-ai/luma-dream-machine/image-to-video": {
+      "credits": 10,
+      "fal_cost": 0.5,
+      "unit": "videos"
+    },
+    "fal-ai/veo2/image-to-video": {
+      "credits_per_5sec": 50,
+      "fal_cost_per_sec": 0.5,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.6/pro/image-to-video": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.095,
+      "unit": "seconds"
+    },
+    "fal-ai/wan-25-preview/image-to-video": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.05,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v2.6/pro/image-to-video": {
+      "credits_per_5sec": 7,
+      "fal_cost_per_sec": 0.07,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v2.5-turbo/pro/image-to-video": {
+      "credits_per_5sec": 7,
+      "fal_cost_per_sec": 0.07,
+      "unit": "seconds"
+    },
+    "fal-ai/minimax/hailuo-02/standard/image-to-video": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.045,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v2.1/master/image-to-video": {
+      "credits_per_5sec": 28,
+      "fal_cost_per_sec": 0.28,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v2.1/standard/image-to-video": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.05,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v2/master/image-to-video": {
+      "credits_per_5sec": 28,
+      "fal_cost_per_sec": 0.28,
+      "unit": "seconds"
+    },
+    "fal-ai/longcat-video/image-to-video/720p": {
+      "credits_per_5sec": 4,
+      "fal_cost_per_sec": 0.04,
+      "unit": "seconds"
+    },
+    "fal-ai/longcat-video/image-to-video/480p": {
+      "credits_per_5sec": 3,
+      "fal_cost_per_sec": 0.025,
+      "unit": "seconds"
+    },
+    "fal-ai/longcat-video/distilled/image-to-video/720p": {
+      "credits_per_5sec": 1,
+      "fal_cost_per_sec": 0.01,
+      "unit": "seconds"
+    },
+    "fal-ai/longcat-video/distilled/image-to-video/480p": {
+      "credits_per_5sec": 1,
+      "fal_cost_per_sec": 0.005,
+      "unit": "seconds"
+    },
+    "fal-ai/ltxv-2/image-to-video/fast": {
+      "credits_per_5sec": 4,
+      "fal_cost_per_sec": 0.04,
+      "unit": "seconds"
+    },
+    "fal-ai/ltxv-2/image-to-video": {
+      "credits_per_5sec": 6,
+      "fal_cost_per_sec": 0.06,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v2.5-turbo/standard/image-to-video": {
+      "credits_per_5sec": 4,
+      "fal_cost_per_sec": 0.042,
+      "unit": "seconds"
+    },
+    "fal-ai/veo3.1/fast/image-to-video": {
+      "credits_per_5sec": 15,
+      "fal_cost_per_sec": 0.15,
+      "unit": "seconds"
+    },
+    "fal-ai/veo3.1/image-to-video": {
+      "credits_per_5sec": 40,
+      "fal_cost_per_sec": 0.4,
+      "unit": "seconds"
+    },
+    "fal-ai/sora-2/image-to-video/pro": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "fal-ai/sora-2/image-to-video": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "decart/lucy-14b/image-to-video": {
+      "credits_per_5sec": 8,
+      "fal_cost_per_sec": 0.08,
+      "unit": "seconds"
+    },
+    "fal-ai/wan/v2.2-a14b/image-to-video/lora": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "fal-ai/minimax/hailuo-02-fast/image-to-video": {
+      "credits_per_5sec": 2,
+      "fal_cost_per_sec": 0.017,
+      "unit": "seconds"
+    },
+    "fal-ai/veo3/image-to-video": {
+      "credits_per_5sec": 40,
+      "fal_cost_per_sec": 0.4,
+      "unit": "seconds"
+    },
+    "fal-ai/wan/v2.2-a14b/image-to-video": {
+      "credits_per_5sec": 8,
+      "fal_cost_per_sec": 0.08,
+      "unit": "seconds"
+    },
+    "fal-ai/ltxv-13b-098-distilled/image-to-video": {
+      "credits_per_5sec": 2,
+      "fal_cost_per_sec": 0.02,
+      "unit": "seconds"
+    },
+    "fal-ai/veo3/fast/image-to-video": {
+      "credits_per_5sec": 15,
+      "fal_cost_per_sec": 0.15,
+      "unit": "seconds"
+    },
+    "fal-ai/minimax/hailuo-02/pro/image-to-video": {
+      "credits_per_5sec": 8,
+      "fal_cost_per_sec": 0.08,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v2.1/pro/image-to-video": {
+      "credits_per_5sec": 9,
+      "fal_cost_per_sec": 0.09,
+      "unit": "seconds"
+    },
+    "fal-ai/magi/image-to-video": {
+      "credits_per_5sec": 20,
+      "fal_cost_per_sec": 0.2,
+      "unit": "seconds"
+    },
+    "fal-ai/magi-distilled/image-to-video": {
+      "credits_per_5sec": 8,
+      "fal_cost_per_sec": 0.08,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.6/standard/image-to-video": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.045,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1/pro/image-to-video": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1.5/pro/image-to-video": {
+      "credits_per_5sec": 10,
+      "fal_cost_per_sec": 0.1,
+      "unit": "seconds"
+    },
+    "fal-ai/kling-video/v1/standard/image-to-video": {
+      "credits_per_5sec": 5,
+      "fal_cost_per_sec": 0.045,
+      "unit": "seconds"
+    },
+    "moonvalley/marey/i2v": {
+      "pricing_type": "variable",
+      "fal_cost": 1.5,
+      "unit": "5 seconds"
+    },
+    "fal-ai/luma-dream-machine/ray-2-flash/image-to-video": {
+      "pricing_type": "variable",
+      "fal_cost": 0.2,
+      "unit": "5 seconds"
+    }
+  }
+}

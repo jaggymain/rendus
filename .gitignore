@@ -30,8 +30,14 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Keep .env.example for documentation
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +45,52 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Prisma
+prisma/*.db
+prisma/*.db-journal
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# Rendus specific
+.next_pid
+.inngest_pid
+*.log
+!.gitkeep
+
+# Claude
+.claude/
+
+# Local npmrc (may contain tokens)
+.npmrc
+
+# Local development files - not needed in repo
+FAL-Models/
+falapis.json
+faltexttoimageapis.json
+faltexttovideoapis.json
+check-db.ts
+check-gen-time.ts
+check-wan-gen.ts
+test-signed-url.ts
+download-thumbnails.sh
+rollback-navbar-fix.sh
+update_app_models.py
+JFROG_INTEGRATION_GUIDE.md
+kling-logo.png
+
+# Backup/copy files
+*.copy.ts
+next.config copy.ts
+
+# Generated media files
+generated-*.mp4
+generated-*.png
+generated-*.jpg

@@ -1,0 +1,490 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
+import { useSession } from 'next-auth/react'
+import { redirect } from 'next/navigation'
+import { GenerationSidebar, type GenerationParameters, type GenerationType } from '@/components/generation-sidebar'
+import { IMAGE_MODELS, VIDEO_MODELS } from '@/lib/models'
+import { SiteHeader } from '@/components/site-header'
+import {
+  SidebarInset,
+  SidebarProvider,
+} from '@/components/ui/sidebar'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Trash2, X, Loader2, Orbit } from 'lucide-react'
+import { toast } from 'sonner'
+import { Skeleton } from '@/components/ui/skeleton'
+
+interface GeneratedImage {
+  id: string
+  imageUrl: string
+  seed: number
+  width: number
+  height: number
+  prompt: string
+  createdAt: string
+  s3Key: string
+}
+
+export default function GeneratePage() {
+  const { data: session, status } = useSession()
+  const [generationType, setGenerationType] = useState<GenerationType>('image')
+  const [selectedModel, setSelectedModel] = useState('fal-ai/flux-pro/v1.1')
+  const [parameters, setParameters] = useState<GenerationParameters>({
+    aspectRatio: '1:1',
+    numInferenceSteps: 28,
+    guidanceScale: 3.5,
+  })
+  const [prompt, setPrompt] = useState('')
+  const [images, setImages] = useState<GeneratedImage[]>([])
+  const [isGenerating, setIsGenerating] = useState(false)
+  const [selectedImage, setSelectedImage] = useState<GeneratedImage | null>(null)
+  const [hoveredId, setHoveredId] = useState<string | null>(null)
+
+  // Handle generation type change
+  const handleGenerationTypeChange = (type: GenerationType) => {
+    setGenerationType(type)
+    // Note: We don't automatically change the model here because the GenerationSidebar
+    // handles model selection and calls this function AFTER setting the selected model.
+    // Changing the model here would overwrite the user's selection.
+  }
+
+  // Redirect if not authenticated
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      redirect('/auth/signin')
+    }
+  }, [status])
+
+  // Fetch user's images on mount
+  useEffect(() => {
+    if (status === 'authenticated') {
+      fetchImages()
+    }
+  }, [status])
+
+  const fetchImages = async () => {
+    try {
+      const res = await fetch('/api/images')
+      if (res.ok) {
+        const data = await res.json()
+        setImages(data.images || [])
+      }
+    } catch (error) {
+      console.error('Failed to fetch images:', error)
+    }
+  }
+
+  const handleParametersChange = (newParams: Partial<GenerationParameters>) => {
+    setParameters(prev => ({ ...prev, ...newParams }))
+  }
+
+  const pollGenerationStatus = async (generationId: string, generationType: 'image' | 'video') => {
+    const maxAttempts = 120 // 2 minutes max (120 * 1000ms)
+    let attempts = 0
+
+    const poll = async (): Promise<void> => {
+      if (attempts >= maxAttempts) {
+        toast.error('Generation timed out', {
+          description: 'Please try again or contact support',
+        })
+        setIsGenerating(false)
+        return
+      }
+
+      attempts++
+
+      try {
+        const res = await fetch(`/api/generations/${generationId}`)
+        if (!res.ok) throw new Error('Failed to check status')
+
+        const status = await res.json()
+
+        if (status.status === 'completed') {
+          // Generation complete!
+          toast.success(generationType === 'video' ? 'Video generated!' : 'Image generated!', {
+            description: generationType === 'video' ? 'Your video has been created successfully.' : 'Your image has been created successfully.',
+          })
+
+          // Add to images list
+          setImages(prev => [{
+            id: status.id,
+            imageUrl: status.resultUrl,
+            seed: status.seed || 0,
+            width: status.width || (generationType === 'video' ? 1920 : 1024),
+            height: status.height || (generationType === 'video' ? 1080 : 1024),
+            prompt: status.prompt,
+            createdAt: status.createdAt,
+            s3Key: status.s3Key || '',
+          }, ...prev])
+
+          setIsGenerating(false)
+          setPrompt('')
+        } else if (status.status === 'failed') {
+          toast.error('Generation failed', {
+            description: status.errorMessage || 'Please try again',
+          })
+          setIsGenerating(false)
+        } else {
+          // Still processing, poll again
+          setTimeout(poll, 1000)
+        }
+      } catch (error) {
+        console.error('Polling error:', error)
+        setTimeout(poll, 1000)
+      }
+    }
+
+    poll()
+  }
+
+  const handleGenerate = async () => {
+    if (!prompt.trim()) return
+
+    // Check if video model requires image URL
+    const isWanEffects = selectedModel === 'fal-ai/wan-effects'
+    const isImageToVideo = selectedModel === 'fal-ai/wan-25-preview/image-to-video'
+
+    if ((isWanEffects || isImageToVideo) && !parameters.imageUrl?.trim() && !parameters.imageFile) {
+      toast.error('Input image is required', {
+        description: 'Please provide an image URL or upload a file.',
+      })
+      return
+    }
+
+    setIsGenerating(true)
+    try {
+      // Convert imageFile to data URL if file is uploaded
+      let imageFileData: string | undefined
+      if (parameters.imageFile) {
+        imageFileData = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader()
+          reader.onloadend = () => resolve(reader.result as string)
+          reader.onerror = reject
+          reader.readAsDataURL(parameters.imageFile!)
+        })
+      }
+
+      // Convert audioFile to data URL if file is uploaded
+      let audioFileData: string | undefined
+      if (parameters.audioFile) {
+        audioFileData = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader()
+          reader.onloadend = () => resolve(reader.result as string)
+          reader.onerror = reject
+          reader.readAsDataURL(parameters.audioFile!)
+        })
+      }
+
+      const requestBody = {
+        prompt: prompt.trim(),
+        model: selectedModel,
+        aspectRatio: parameters.aspectRatio,
+        numInferenceSteps: parameters.numInferenceSteps,
+        guidanceScale: parameters.guidanceScale,
+        seed: parameters.seed,
+        // Video-specific parameters
+        imageUrl: parameters.imageUrl,
+        imageFile: imageFileData, // Send as base64 data URL
+        audioUrl: parameters.audioUrl,
+        audioFile: audioFileData, // Send as base64 data URL
+        resolution: parameters.resolution,
+        duration: parameters.duration,
+        negativePrompt: parameters.negativePrompt,
+        enablePromptExpansion: parameters.enablePromptExpansion,
+        enableSafetyChecker: parameters.enableSafetyChecker,
+        // WAN Effects parameters
+        effectType: parameters.effectType,
+        numFrames: parameters.numFrames,
+        framesPerSecond: parameters.framesPerSecond,
+        loraScale: parameters.loraScale,
+        turboMode: parameters.turboMode,
+      }
+
+      const res = await fetch('/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody),
+      })
+
+      if (!res.ok) {
+        const errorData = await res.json()
+        throw new Error(errorData.error || errorData.message || 'Generation failed')
+      }
+
+      const data = await res.json()
+
+      // Show "generating" toast
+      const generationType = data.type === 'video' ? 'video' : 'image'
+      toast.info(`Generating ${generationType}...`, {
+        description: 'This may take 30-60 seconds. You can continue using the app.',
+      })
+
+      // Start polling for status
+      pollGenerationStatus(data.id, generationType)
+
+    } catch (err) {
+      toast.error('Failed to start generation', {
+        description: err instanceof Error ? err.message : 'Please try again',
+      })
+      setIsGenerating(false)
+    }
+  }
+
+  const handleDelete = async (id: string, e: React.MouseEvent) => {
+    e.stopPropagation()
+    if (!confirm('Are you sure you want to delete this image?')) return
+
+    try {
+      const res = await fetch(`/api/images/${id}`, {
+        method: 'DELETE',
+      })
+
+      if (!res.ok) throw new Error('Delete failed')
+
+      toast.success('Image deleted', {
+        description: 'The image has been removed.',
+      })
+
+      if (selectedImage?.id === id) {
+        setSelectedImage(null)
+      }
+
+      setImages(prev => prev.filter(img => img.id !== id))
+    } catch (error) {
+      toast.error('Failed to delete image', {
+        description: error instanceof Error ? error.message : 'Please try again',
+      })
+    }
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleGenerate()
+    }
+  }
+
+  if (status === 'loading') {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    )
+  }
+
+  return (
+    <SidebarProvider>
+      <div className="[--header-height:theme(spacing.14)]">
+        <SiteHeader title={generationType === 'image' ? 'Image Generation' : 'Video Generation'} />
+        <div className="flex flex-1">
+          <GenerationSidebar
+            generationType={generationType}
+            onGenerationTypeChange={handleGenerationTypeChange}
+            selectedModel={selectedModel}
+            onSelectModel={setSelectedModel}
+            parameters={parameters}
+            onParametersChange={handleParametersChange}
+          />
+          <SidebarInset>
+            <div className="flex flex-col gap-6 p-6 h-full overflow-auto">
+              {/* Generation Form */}
+              <div className="flex w-full gap-2">
+                <Input
+                  type="text"
+                  placeholder={generationType === 'video' ?
+                    (selectedModel === 'fal-ai/wan-effects' ?
+                      "Describe the subject of the photo you want to apply the effect to..." :
+                      "Describe the video you want to generate...") :
+                    "Describe the image you want to generate..."}
+                  value={prompt}
+                  onChange={(e) => setPrompt(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  disabled={isGenerating}
+                  className="flex-1"
+                />
+                <Button
+                  onClick={handleGenerate}
+                  disabled={isGenerating || !prompt.trim()}
+                  size="default"
+                >
+                  {isGenerating ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Generating...
+                    </>
+                  ) : (
+                    'Generate'
+                  )}
+                </Button>
+              </div>
+
+              {/* Grid Gallery */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+                {isGenerating && (
+                  <div className="aspect-square rounded-lg overflow-hidden relative border border-zinc-800 bg-zinc-900/50">
+                    <Skeleton className="h-full w-full bg-zinc-800/80" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-zinc-900/80 to-zinc-900/40">
+                      <Orbit className="h-10 w-10 text-zinc-400 animate-spin" />
+                    </div>
+                  </div>
+                )}
+                {images.map((image) => {
+                  const isVideo = image.imageUrl?.includes('.mp4') || image.imageUrl?.includes('video')
+                  return (
+                    <div
+                      key={image.id}
+                      className="relative aspect-square overflow-hidden rounded-lg border border-zinc-800 bg-zinc-900 cursor-pointer group"
+                      onClick={() => setSelectedImage(image)}
+                      onMouseEnter={() => setHoveredId(image.id)}
+                      onMouseLeave={() => setHoveredId(null)}
+                    >
+                      {isVideo ? (
+                        <video
+                          src={image.imageUrl}
+                          className="w-full h-full object-cover transition-opacity group-hover:opacity-80"
+                          muted
+                          loop
+                          playsInline
+                          onMouseEnter={(e) => {
+                            const p = e.currentTarget.play()
+                            if (p !== undefined) {
+                              p.catch(() => { })
+                            }
+                          }}
+                          onMouseLeave={(e) => e.currentTarget.pause()}
+                        />
+                      ) : (
+                        <Image
+                          src={image.imageUrl}
+                          alt={image.prompt?.substring(0, 50) || 'Generated image'}
+                          fill
+                          sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, (max-width: 1280px) 16.66vw, 12.5vw"
+                          className="object-cover transition-opacity group-hover:opacity-80"
+                          loading="lazy"
+                          placeholder="blur"
+                          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                        />
+                      )}
+
+                      {/* Delete button on hover */}
+                      {hoveredId === image.id && (
+                        <button
+                          onClick={(e) => handleDelete(image.id, e)}
+                          className="absolute top-2 right-2 p-2 bg-red-500 hover:bg-red-600 text-white rounded-md transition-colors z-10"
+                          aria-label="Delete item"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+
+              {images.length === 0 && !isGenerating && (
+                <div className="flex items-center justify-center h-64 text-muted-foreground">
+                  <p>No {generationType === 'video' ? 'videos' : 'images'} yet. Start by creating one above!</p>
+                </div>
+              )}
+            </div>
+
+            {/* Expanded View Modal */}
+            {selectedImage && (() => {
+              const isVideo = selectedImage.imageUrl?.includes('.mp4') || selectedImage.imageUrl?.includes('video')
+              return (
+                <div
+                  className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-8"
+                  onClick={() => setSelectedImage(null)}
+                >
+                  <div
+                    className="relative w-full max-w-7xl h-full max-h-[90vh] bg-background rounded-lg shadow-lg flex overflow-hidden"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {/* Close button */}
+                    <button
+                      onClick={() => setSelectedImage(null)}
+                      className="absolute top-4 right-4 z-10 p-2 bg-background/80 hover:bg-background rounded-full transition-colors"
+                      aria-label="Close expanded view"
+                    >
+                      <X className="w-6 h-6" />
+                    </button>
+
+                    {/* Media Section - Left */}
+                    <div className="flex-1 flex items-center justify-center bg-muted p-8 relative">
+                      <div className="relative w-full h-full">
+                        {isVideo ? (
+                          <video
+                            src={selectedImage.imageUrl}
+                            className="w-full h-full object-contain rounded-lg"
+                            controls
+                            autoPlay
+                            loop
+                          />
+                        ) : (
+                          <Image
+                            src={selectedImage.imageUrl}
+                            alt={selectedImage.prompt?.substring(0, 50) || 'Generated image'}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 70vw"
+                            className="object-contain rounded-lg"
+                            priority
+                          />
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Details Section - Right */}
+                    <div className="w-96 bg-background border-l p-6 overflow-y-auto">
+                      <h2 className="text-xl font-semibold mb-4">{isVideo ? 'Video' : 'Image'} Details</h2>
+
+                      <div className="space-y-4">
+                        <div>
+                          <h3 className="text-sm font-medium text-muted-foreground mb-1">Prompt</h3>
+                          <p className="text-sm">{selectedImage.prompt}</p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-sm font-medium text-muted-foreground mb-1">Resolution</h3>
+                          <p className="text-sm">{selectedImage.width} × {selectedImage.height}</p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-sm font-medium text-muted-foreground mb-1">Seed</h3>
+                          <p className="text-sm font-mono">{selectedImage.seed}</p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-sm font-medium text-muted-foreground mb-1">Created At</h3>
+                          <p className="text-sm">{new Date(selectedImage.createdAt).toLocaleString()}</p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-sm font-medium text-muted-foreground mb-1">ID</h3>
+                          <p className="text-sm font-mono text-xs break-all">{selectedImage.id}</p>
+                        </div>
+
+                        {/* Delete button in details panel */}
+                        <div className="pt-4">
+                          <button
+                            onClick={(e) => handleDelete(selectedImage.id, e)}
+                            className="w-full py-2 px-4 bg-red-500 hover:bg-red-600 text-white rounded-md transition-colors flex items-center justify-center gap-2"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                            {isVideo ? 'Delete Video' : 'Delete Image'}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })()}
+          </SidebarInset>
+        </div>
+      </div>
+    </SidebarProvider>
+  )
+}

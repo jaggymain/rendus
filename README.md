@@ -15,6 +15,12 @@
 
 ---
 
+<div align="center">
+  <img src="public/hero-screenshot.png" alt="Rendus AI - Your Creative Studio Powered By AI" width="100%" />
+</div>
+
+---
+
 ## 🎯 Overview
 
 Rendus AI is a modern, production-ready SaaS platform for AI-powered image and video generation. Built with Next.js 16 and React 19, it provides a seamless experience for creating stunning visuals using state-of-the-art AI models from providers like Black Forest Labs (FLUX), Google (Veo), and more.
@@ -152,7 +158,7 @@ INNGEST_EVENT_KEY="your-inngest-key"
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/rendus.git
+git clone https://github.com/jaggymain/rendus.git
 cd rendus
 
 # Install dependencies
